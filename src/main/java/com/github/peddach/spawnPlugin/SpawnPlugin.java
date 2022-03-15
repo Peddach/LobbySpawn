@@ -3,6 +3,11 @@ package com.github.peddach.spawnPlugin;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.github.peddach.spawnPlugin.listener.BlockBreakListener;
+import com.github.peddach.spawnPlugin.listener.JoinListener;
+import com.github.peddach.spawnPlugin.listener.OnPlayerDeathListner;
+import com.github.peddach.spawnPlugin.listener.PlayerHungerListener;
+
 import net.milkbowl.vault.chat.Chat;
 
 public class SpawnPlugin extends JavaPlugin {
@@ -21,6 +26,10 @@ public class SpawnPlugin extends JavaPlugin {
 		if(setupChat() == false) {
 			getServer().getPluginManager().disablePlugin(this);
 		}
+		this.getServer().getPluginManager().registerEvents(new JoinListener(), this);
+		this.getServer().getPluginManager().registerEvents(new BlockBreakListener(), this);
+		this.getServer().getPluginManager().registerEvents(new PlayerHungerListener(), this);
+		this.getServer().getPluginManager().registerEvents(new OnPlayerDeathListner(), this);
 
 	}
 
