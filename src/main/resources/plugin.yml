@@ -5,3 +5,7 @@ description: Peddachs Spawn plugin
 api-version: 1.18
 author: ProfessorSam
 prefix: Spawn
+permissions:
+   lobby.break:
+      description: Allow players to break blocks in the Lobby
+      default: false
