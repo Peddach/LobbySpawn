@@ -1,0 +1,7 @@
+main: com.github.peddach.spawnPlugin.SpawnPlugin
+name: LobbySpawn
+version: 1.1.1
+description: Peddachs Spawn plugin
+api-version: 1.18
+author: ProfessorSam
+prefix: Spawn
