@@ -7,6 +7,7 @@ import com.github.peddach.spawnPlugin.listener.BlockBreakListener;
 import com.github.peddach.spawnPlugin.listener.JoinListener;
 import com.github.peddach.spawnPlugin.listener.OnPlayerDeathListner;
 import com.github.peddach.spawnPlugin.listener.PlayerHungerListener;
+import com.github.peddach.spawnPlugin.listener.PvpListener;
 
 import net.milkbowl.vault.chat.Chat;
 
@@ -30,6 +31,7 @@ public class SpawnPlugin extends JavaPlugin {
 		this.getServer().getPluginManager().registerEvents(new BlockBreakListener(), this);
 		this.getServer().getPluginManager().registerEvents(new PlayerHungerListener(), this);
 		this.getServer().getPluginManager().registerEvents(new OnPlayerDeathListner(), this);
+		this.getServer().getPluginManager().registerEvents(new PvpListener(), this);
 
 	}
 
